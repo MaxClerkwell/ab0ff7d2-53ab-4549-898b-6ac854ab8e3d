@@ -7,24 +7,31 @@
 
 
 \begin{document}
-
+Working with files is an essential skill for you as a programmer, enabling the long-term storage of data, analysis, and the sharing of information between different parts of your program or even between different programs. Files can store a wide range of data types, from text and images to complex datasets and executable code. By learning how to create, read, write, and manipulate files, you can use the full potential of your software, allowing you to persist data beyond the runtime of a program, exchange data with external sources, and process large volumes of information efficiently. Mastering file operations is foundational for tasks ranging from simple data logging to the development of advanced data-driven applications.
 
 
 \section*{Exercises}
 \begin{aufgabe}
-    Write a program, that takes a number as a sole parameter.
-    Inside of the program, open a file in the directory, that the program is executed in and call it the number that was given as a parameter.
-    Use a loop to write every number from 1 to the number that was given as a parameter to the file.
+    Write a program that takes a number as its sole parameter.
+    Inside the program, open a file in the directory, that the program is executed in. The name of the file should be the number from the input.
+    Then, use a loop to write every number from 1 to the number that was given as a parameter to the file.
+
+    The basics of filehandling are explained \href{https://www.geeksforgeeks.org/basics-file-handling-c/}{here}
 \end{aufgabe}
 
 \begin{aufgabe}
-    Write a program, that takes a file-path as a sole parameter.
-    Inside of the program, read the file line by line and print every line to the console.
+    Next, we want to read a given file. This program resembles a command line tool that you have used during the past days. Which one is it?
+    
+    Write a program that takes a file-path as a sole parameter.
+    Inside the program, read the file line by line and print every line to the terminal.
+    Bonus: Try this with different types of files. Does your code work with binary files, csv, ...?
 \end{aufgabe}
 
 \begin{aufgabe}
-    Write a program, that takes two file-paths as parameters.
-    Inside of the program, read the first file line by line and write every line to the second file.
+    Finally, we want to read from one file and write to another to cover all potential types of operations with files. Just like the task before, this functionality is implemented in a command line tool. Which one is it?
+    
+    Write a program that takes two file-paths as parameters.
+    Inside the program, read the first file line by line and write every line to the second file. Check that the content of both files is identical.
 \end{aufgabe}
 
 
