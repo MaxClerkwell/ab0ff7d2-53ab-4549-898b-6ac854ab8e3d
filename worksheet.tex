@@ -26,8 +26,8 @@ To use a stream, we now need to find a way, to:
 \begin{enumerate}
     \item get a specific stream from the OS
     \item store reference to a stream behind an identifier
-    \item use a function, that returns contents of a stream
-    \item use a function, that writes to a stream
+    \item use a function that returns contents of a stream
+    \item use a function that writes to a stream
 \end{enumerate} 
 
 
@@ -52,13 +52,18 @@ To use a stream, we now need to find a way, to:
 \end{aufgabe}
 
 \begin{aufgabe}
-    Write a program, that takes a file-path as a sole parameter.
-    Inside of the program, read the file line by line and print every line to the console.
+    Next, we want to read a given file. This program resembles a command line tool that you have used during the past days. Which one is it?
+    
+    Write a program that takes a file-path as a sole parameter.
+    Inside the program, read the file line by line and print every line to the terminal.
+    Bonus: Try this with different types of files. Does your code work with binary files, csv, ...?
 \end{aufgabe}
 
 \begin{aufgabe}
-    Write a program, that takes two file-paths as parameters.
-    Inside of the program, read the first file line by line and write every line to the second file.
+    Finally, we want to read from one file and write to another to cover all potential types of operations with files. Just like the task before, this functionality is implemented in a command line tool. Which one is it?
+    
+    Write a program that takes two file-paths as parameters.
+    Inside the program, read the first file line by line and write every line to the second file. Check that the content of both files is identical.
 \end{aufgabe}
 
 
