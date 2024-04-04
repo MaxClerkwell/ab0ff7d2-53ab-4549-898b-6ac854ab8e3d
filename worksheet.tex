@@ -7,10 +7,44 @@
 
 
 \begin{document}
-
+Subroutines, called by a process, that take parameters and return values are called \textbf{pure functions}.
+They can be viewed as \textbf{stateless} and without \textbf{side-effects}.
+Any pure function can be substituted by their retrun value.
+This is the fundamental concept of programming.
+In todays language the term \textbf{functional programing} is used to describe this concept, in opposition to many other modern programming paradigms.
+But not everything, that our computer can execute is a pure function.
+Often times, we want to write to use external hardware, or communicate with another program.
+These interactions are called side-effects, they are not pure, and not stateless.
+To interact with other programs, we need to have shared memory with them, so that one program can write to it and the other can read from it.
+Sharing memory directly can lead to many intrecate challenges.
+Thus a more convenient model for system-interaction is needed.
+Such a model was defined in the early 1980s by \textbf{Richard Stallman} and became known as \textbf{POSIX}.
+Among other things, POSIX defines a concept called a \textbf{stream}.
+A stream is a portal, that the operating-system provides to a process. 
+A process can either read from or write to a stream.
+To use a stream, we now need to find a way, to:
+\begin{enumerate}
+    \item get a specific stream from the OS
+    \item store reference to a stream behind an identifier
+    \item use a function, that returns contents of a stream
+    \item use a function, that writes to a stream
+\end{enumerate} 
 
 
 \section*{Exercises}
+\begin{aufgabe}
+    The library \texttt{stdio.h} defines a type - just as we have already defined an own struct - called a \texttt{FILE}.
+    A file denotes a stream connection. 
+    Among other information, it contains an address to a buffer, that was offered by the operating-system. 
+    Since our RAM is the only memory, we are allowed to write to, we need to ask the operating-system to provide us with a buffer, that we can write to.
+    Thus it is necessary, to make a systemcall to the operating system, whose return value is the address of the buffer.
+    This whole shebang is encapsulated in a standard library function called \texttt{fopen}.
+    Therefore we want to call the function \texttt{fopen} with two parameters:
+    \begin{enumerate}
+        \item the name of the filepath - which mal also be a device! Remember, everything is a file.
+        \item the mode, that we want to open the file in, which can be \texttt{"r"}, \texttt{"w"}, \texttt{"a"}. The permissions are checked by the operating-system. THe 
+    \end{enumerate}
+\end{aufgabe}
 \begin{aufgabe}
     Write a program, that takes a number as a sole parameter.
     Inside of the program, open a file in the directory, that the program is executed in and call it the number that was given as a parameter.
