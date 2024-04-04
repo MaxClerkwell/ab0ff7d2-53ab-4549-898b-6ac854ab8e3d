@@ -42,8 +42,10 @@ To use a stream, we now need to find a way, to:
     Therefore we want to call the function \texttt{fopen} with two parameters:
     \begin{enumerate}
         \item the name of the filepath - which mal also be a device! Remember, everything is a file.
-        \item the mode, that we want to open the file in, which can be \texttt{"r"}, \texttt{"w"}, \texttt{"a"}. The permissions are checked by the operating-system. THe 
+        \item the mode, that we want to open the file in, which can be \texttt{"r"}, \texttt{"w"}, \texttt{"a"}. The permissions are checked by the operating-system.
     \end{enumerate}
+    If the file could not be opened, the function should return \texttt{NULL}.
+    Write a program, that tryies opening a file to read from if the file is readable (it exists, and the permissions are correct), or prints an error message if the return value of \texttt{fopen} is \texttt{NULL}.
 \end{aufgabe}
 \begin{aufgabe}
     Write a program, that takes a number as a sole parameter.
